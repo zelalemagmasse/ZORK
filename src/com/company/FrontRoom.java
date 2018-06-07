@@ -7,13 +7,13 @@ public class FrontRoom {
 
     }
     public String displayNextRoom(){
-        String nextRoom=null;
+        String nextRoom=new String();
         switch (direction){
-            case "south":nextRoom="foyer";
+            case "south":nextRoom="foyer room";
             break;
-            case"west":nextRoom="library";
+            case"west":nextRoom="library room";
             break;
-            case "east":nextRoom="kitchen";
+            case "east":nextRoom="kitchen room";
             break;
         }
         return nextRoom;

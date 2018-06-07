@@ -7,7 +7,7 @@ public class LibraryRoom {
 
     }
     public String displayNextRoom(){
-        String nextRoom=null;
+        String nextRoom=new String();
         switch (direction){
             case "east":nextRoom="front room";
                 break;

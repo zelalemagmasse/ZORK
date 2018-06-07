@@ -13,8 +13,10 @@ public class Move {
         this.currentRoom=currentRoom;
         this.direction=direction;
     }
+    ArrayList roomCounter = new ArrayList();
     public String roomPicker(){
-        ArrayList roomCounter = new ArrayList();
+
+        roomCounter.add(currentRoom);
         //return roomCounter.size();
         String nextRoom=null;
         if (currentRoom.equalsIgnoreCase("front Room")){
@@ -50,5 +52,8 @@ public class Move {
             nextRoom = foyRoom.displayNextRoom();
         }
         return nextRoom;
+    }
+    public int roomCounterMethod(){
+        return roomCounter.size();
     }
 }

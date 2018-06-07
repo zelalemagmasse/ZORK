@@ -16,14 +16,24 @@ public class Main {
         String currentRoom = "foyer";
 
         DisplayContnet dispcont = new DisplayContnet();
+        int roomCounter=0;
 
         while (!pick.equalsIgnoreCase("q")) {
+
             Move moveDirct = new Move(currentRoom, pick);
             String nextRoom = moveDirct.roomPicker();
             System.out.println(dispcont.displayConten(nextRoom));
+            System.out.println(dispcont.ghostFollow());
+
+            System.out.println(nextRoom);
+            currentRoom=nextRoom;
             pick = keyboard.nextLine();
+            roomCounter=moveDirct.roomCounterMethod();
 
         }
+
+        System.out.println("you have been in " + roomCounter + " rooms");
+
 
 
     }

@@ -7,11 +7,11 @@ public class ParlorRoom {
 
     }
     public String displayNextRoom(){
-        String nextRoom=null;
+        String nextRoom=new String();
         switch (direction){
-            case "south":nextRoom="kitchen";
+            case "south":nextRoom="kitchen room";
                 break;
-            case"west":nextRoom="vault";
+            case"west":nextRoom="vault room";
                 break;
 
         }
