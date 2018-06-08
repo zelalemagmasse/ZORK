@@ -45,7 +45,7 @@ public  class DisplayContnet {
         Random rand = new Random();
         String nextRoom = new String();
         int x = rand.nextInt(4);
-        String ghostMessage=null;
+        String ghostMessage=new String();
         if(x==0){
             ghostMessage = "You are being followed by a ghost";
         }

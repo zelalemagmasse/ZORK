@@ -11,7 +11,7 @@ public class KitchenRoom {
         switch (direction){
             case "west":nextRoom="front room";
                 break;
-            case"north":nextRoom="parlor";
+            case"north":nextRoom="parlor room";
                 break;
 
         }

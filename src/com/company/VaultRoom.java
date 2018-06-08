@@ -13,11 +13,11 @@ public class VaultRoom {
         String nextRoom = new String();
         int x = rand.nextInt(4);
         if (x == 0) {
-            nextRoom = "secret room";
+            nextRoom = "secrete room";
 
         } else {
 
-            nextRoom = "parlor";
+            nextRoom = "parlor room";
         }
         return nextRoom;
 
