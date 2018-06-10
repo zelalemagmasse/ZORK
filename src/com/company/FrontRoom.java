@@ -2,6 +2,21 @@ package com.company;
 
 public class FrontRoom {
     private String direction;
+    private double moneyInTheRoom;
+
+    public void setMoneyInTheRoom(double moneyInTheRoom) {
+        this.moneyInTheRoom = moneyInTheRoom;
+    }
+
+    public double getMoneyInTheRoom() {
+        return moneyInTheRoom;
+    }
+
+    public FrontRoom(double moneyInTheRoom) {
+
+        this.moneyInTheRoom = moneyInTheRoom;
+    }
+
     public FrontRoom(String direction){
         this.direction=direction;
 
@@ -18,8 +33,5 @@ public class FrontRoom {
         }
         return nextRoom;
     }
-    public String toString(){
-        return "you are standing in the frontRoom and you see of a piano.\n"  +
-                "You can select (1) exit door to he south, (2) exit door to he west,(3) exit door to he east or press q to quit ";
-    }
+
 }

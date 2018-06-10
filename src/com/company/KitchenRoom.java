@@ -2,6 +2,20 @@ package com.company;
 
 public class KitchenRoom {
     private String direction;
+    private double moneyInTheRoom;
+
+    public KitchenRoom(double moneyInTheRoom) {
+        this.moneyInTheRoom = moneyInTheRoom;
+    }
+
+    public double getMoneyInTheRoom() {
+        return moneyInTheRoom;
+    }
+
+    public void setMoneyInTheRoom(double moneyInTheRoom) {
+        this.moneyInTheRoom = moneyInTheRoom;
+    }
+
     public KitchenRoom(String direction){
         this.direction=direction;
 

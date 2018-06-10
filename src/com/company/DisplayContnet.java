@@ -3,6 +3,7 @@ package com.company;
 import java.util.HashMap;
 import java.util.Random;
 
+
 public  class DisplayContnet {
 
     HashMap contentDisp=new HashMap();

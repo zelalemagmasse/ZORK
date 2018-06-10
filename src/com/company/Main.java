@@ -1,6 +1,7 @@
 package com.company;
-import java.util.Random;
+
 import java.util.Scanner;
+
 public class Main {
 
 
@@ -9,13 +10,16 @@ public class Main {
         // write your code herera
         Scanner keyboard = new Scanner(System.in);
 
+
+
         System.out.println("You are standing in the foyer of an old house.");
         System.out.println("You see a dead scorpion.");
         System.out.println("You can (north)exit to the north or press Q to quit");
         String pick = keyboard.nextLine();
         String currentRoom = "foyer room";
         String directn = new String();
-        String prevRoom = new String();
+        MoneyInitializer moneyInitializer=new MoneyInitializer();
+        moneyInitializer.moneyInitializer();
 
         DisplayContnet dispcont = new DisplayContnet();
         int roomCounter=0;
@@ -25,11 +29,13 @@ public class Main {
 
              moveDirct.setCurrentRoom(currentRoom);
              moveDirct.setDirection(pick);
-             prevRoom=currentRoom;
              String nextRoom = moveDirct.roomPicker();
              System.out.println(dispcont.displayConten(nextRoom));
-             directn=pick;
+             double moneyCollected = moveDirct.moneyBanker();
 
+
+
+             System.out.println("The money you have collected sofar is :" + moneyCollected);
             pick = keyboard.nextLine();
             if (!pick.equalsIgnoreCase("p")) {
                 currentRoom = nextRoom;

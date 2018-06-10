@@ -4,6 +4,20 @@ import java.util.Random;
 
 public class VaultRoom {
     private String direction;
+    private double moneyInTheRoom;
+
+    public VaultRoom(double moneyInTheRoom) {
+        this.moneyInTheRoom = moneyInTheRoom;
+    }
+
+    public double getMoneyInTheRoom() {
+        return moneyInTheRoom;
+    }
+
+    public void setMoneyInTheRoom(double moneyInTheRoom) {
+        this.moneyInTheRoom = moneyInTheRoom;
+    }
+
     public VaultRoom(String direction){
         this.direction=direction;
 
