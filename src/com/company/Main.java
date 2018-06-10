@@ -14,6 +14,8 @@ public class Main {
         System.out.println("You can (north)exit to the north or press Q to quit");
         String pick = keyboard.nextLine();
         String currentRoom = "foyer room";
+        String directn = new String();
+        String prevRoom = new String();
 
         DisplayContnet dispcont = new DisplayContnet();
         int roomCounter=0;
@@ -23,14 +25,20 @@ public class Main {
 
              moveDirct.setCurrentRoom(currentRoom);
              moveDirct.setDirection(pick);
+             prevRoom=currentRoom;
              String nextRoom = moveDirct.roomPicker();
              System.out.println(dispcont.displayConten(nextRoom));
+             directn=pick;
 
-
-
-            currentRoom=nextRoom;
             pick = keyboard.nextLine();
-           pick= moveDirct.previousChecker(pick);
+            if (!pick.equalsIgnoreCase("p")) {
+                currentRoom = nextRoom;
+            }
+            else {
+                System.out.println(dispcont.displayConten(currentRoom));
+                pick = keyboard.nextLine();
+            }
+
             roomCounter=moveDirct.roomCounterMethod();
 
         }
